@@ -89,6 +89,7 @@ module FastlaneCI
 
       credential = self.provider_credential
       current_project = self.project
+      current_sha = repo.most_recent_commit.sha
 
       build_task = TaskQueue::Task.new(work_block: proc {
         FastlaneCI::TestRunnerService.new(

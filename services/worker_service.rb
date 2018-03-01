@@ -41,9 +41,7 @@ module FastlaneCI
         raise "unrecognized provider_type: #{provider_credential.type}"
       end
 
-      new_workers.each do |new_worker|
-        self.project_to_workers_dictionary[workers_key] = new_worker
-      end
+      self.project_to_workers_dictionary[workers_key] = new_workers
     end
 
     def stop_workers(project: nil, user_responsible: nil)
@@ -58,7 +56,7 @@ module FastlaneCI
 
     def num_workers
       self.project_to_workers_dictionary.values.reduce(0) do |sum, workers|
-        sum + workers
+        sum + workers.length
       end
     end
 

@@ -15,7 +15,7 @@ module FastlaneCI
       self.trigger_type = FastlaneCI::JobTrigger::TRIGGER_TYPE[:nightly]
       self.scheduler = WorkerScheduler.new(cron_schedule: NIGHTLY_CRON_TIME)
 
-      super(provider_credential, project) # This starts the work by calling `work`
+      super # This starts the work by calling `work`
     end
 
     def work

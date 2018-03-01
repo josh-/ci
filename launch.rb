@@ -138,8 +138,7 @@ module FastlaneCI
           )
         end
       end
-require "pry"
-binding.pry
+
       logger.info("Seems like no workers were started to monitor your projects") if Services.worker_service.num_workers == 0
 
       # Initialize the workers

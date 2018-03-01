@@ -22,7 +22,7 @@ module FastlaneCI
 
       self.current_tasks = []
 
-      super(provider_credential, project) # This starts the work by calling `work`
+      super # This starts the work by calling `work`
     end
 
     def wait_for_previous_tasks?
