@@ -15,8 +15,8 @@
 
   <%= erb :"../../partials/navigation" %>
 
-  <main class="mdl-layout__content" style="padding: 40px">
-    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-info">
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-info" style="padding: 40px">
       <%= erb(:project_info, locals: { project: project }) %>
     </section>
     <section class="mdl-layout__tab-panel" id="scroll-tab-settings">

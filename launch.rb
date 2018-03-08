@@ -32,8 +32,8 @@ module FastlaneCI
       github_projects = Services.config_service.projects(provider_credential: self.provider_credential)
       github_service = FastlaneCI::GitHubService.new(provider_credential: self.provider_credential)
 
-      run_pending_github_builds(projects: github_projects, github_service: github_service)
-      enqueue_builds_for_open_github_prs_with_no_status(projects: github_projects, github_service: github_service)
+      # run_pending_github_builds(projects: github_projects, github_service: github_service)
+      # enqueue_builds_for_open_github_prs_with_no_status(projects: github_projects, github_service: github_service)
     end
 
     def self.require_fastlane_ci

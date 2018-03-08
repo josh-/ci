@@ -76,6 +76,8 @@ module FastlaneCI
     end
 
     post "#{HOME}/:project_id/save" do
+      require "pry"
+      binding.pry
       project_id = params[:project_id]
       project = self.user_project_with_id(project_id: project_id)
       project.lane = params["selected_lane"]
